@@ -8,9 +8,11 @@ from Cython.Build import cythonize
 with open('README.md', 'r') as fh:
     long_description = fh.read()
 
+ext_modules = cythonize('conk/conk.pyx')
+
 setup(
-    name='conk-rvolden',
-    version='1.0',
+    name='conk',
+    version='1.0.0',
     author='Roger Volden',
     author_email='rvolden@ucsc.edu',
     description='A modified SW aligner for C3POa',
@@ -24,6 +26,6 @@ setup(
         'Operating System :: OS Independent',
     ],
     setup_requires=['cython'],
-    ext_modules=cythonize("conk/conk.pyx",
-                          annotate=True),
+    python_requires='>=3.5',
+    ext_modules=ext_modules,
 )
