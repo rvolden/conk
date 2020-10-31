@@ -1,9 +1,15 @@
 # conk
 Cython Smith-Waterman aligner for C3POa
 
-Build:
-```bash
-python3 setup.py sdist bdist_wheel
-cd dist
-pip3 install --user conk*whl
+To build the module and install, run `make`.
+To clean up this directory, run `make clean`.
+
+Usage in python:
+```python3
+from conk import conk
+
+seq = 'AAAAA'
+penalty = 20
+
+scores = conk.conk(seq, seq, penalty)
 ```
