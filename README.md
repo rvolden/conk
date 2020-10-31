@@ -1,6 +1,11 @@
 # conk
 Cython Smith-Waterman aligner for C3POa
 
+Requirements:
+ - Cython
+ - setuptools
+ - wheel
+
 To build the module and install, run `make`.
 To clean up this directory, run `make clean`.
 
